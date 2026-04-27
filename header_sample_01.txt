@@ -1,0 +1,34 @@
+=======================================================================
+RAW EMAIL HEADER — SAMPLE 01
+For analysis with: https://toolbox.googleapps.com/apps/messageheader/
+                   https://mxtoolbox.com/EmailHeaders.aspx
+=======================================================================
+INSTRUCTIONS: Copy everything between the dashed lines and paste into
+either of the header analysis tools above.
+-----------------------------------------------------------------------
+Delivered-To: user@company.com
+Received: from mail.secure-account-verify.com (mail.secure-account-verify.com. [45.33.32.156])
+        by mx.company.com with ESMTPS id x7si123456abcde.2025.04.10.02.14.33
+        for <user@company.com>;
+        Thu, 10 Apr 2025 02:14:33 -0700 (PDT)
+Received-SPF: fail (google.com: domain of security@secure-account-verify.com does not designate 45.33.32.156 as permitted sender) client-ip=45.33.32.156;
+Authentication-Results: mx.company.com;
+       dkim=fail header.i=@secure-account-verify.com header.s=phish2025 header.b=AbC12345;
+       spf=fail (google.com: domain of security@secure-account-verify.com does not designate 45.33.32.156 as permitted sender) smtp.mailfrom=security@secure-account-verify.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=secure-account-verify.com
+Return-Path: <bounce@secure-account-verify.com>
+Received: from [192.168.1.5] (unknown [45.33.32.156])
+        by mail.secure-account-verify.com (Postfix) with ESMTP id 3AbCdEfGhI
+        for <user@company.com>; Thu, 10 Apr 2025 09:14:00 +0000 (UTC)
+From: "Security Team" <security@secure-account-verify.com>
+To: user@company.com
+Reply-To: collect@secure-account-verify.com
+Subject: Urgent: Your Account Will Be Locked
+Date: Thu, 10 Apr 2025 02:14:00 -0700
+Message-ID: <20250410.021400.phish1@secure-account-verify.com>
+X-Mailer: PhishKit/2.1
+X-Originating-IP: [45.33.32.156]
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+-----------------------------------------------------------------------

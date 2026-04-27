@@ -1,0 +1,59 @@
+=======================================================================
+PHISHING EMAIL SAMPLE 02 — MEDIUM RISK / SUSPICIOUS
+Captured: April 2025  |  Classification: SUSPICIOUS  |  Score: 6 pts
+=======================================================================
+
+----- RECONSTRUCTED EMAIL HEADERS -----
+
+Delivered-To: user@company.com
+Received: from mail.amazon-support-help.org (198.51.100.42)
+        by mx.company.com with ESMTP id k3si987654xyz
+        for <user@company.com>;
+        Wed, 9 Apr 2025 10:22:11 -0700 (PDT)
+Received-SPF: softfail (domain of noreply@amazon-support-help.org)
+Authentication-Results: mx.company.com;
+        spf=softfail smtp.mailfrom=noreply@amazon-support-help.org;
+        dkim=pass header.i=@amazon-support-help.org;
+        dmarc=none
+From: "Amazon Customer Service" <noreply@amazon-support-help.org>
+To: user@company.com
+Subject: Your Amazon Order Has Been Delayed
+Date: Wed, 9 Apr 2025 10:22:00 -0700
+Message-ID: <20250409.1022.order@amazon-support-help.org>
+
+----- EMAIL BODY -----
+
+Subject: Your Amazon Order Has Been Delayed
+
+Dear Customer,
+
+Your recent order has been delayed due to a verification issue with
+your delivery address. Please click below to confirm your details
+and reschedule your delivery.
+
+Confirm Address: http://amazon-support-help.org/verify-address
+
+Thank you for your patience.
+
+Amazon Customer Service
+
+----- ANALYST NOTES -----
+
+RISK LEVEL : SUSPICIOUS (MEDIUM)
+SCORE      : 6 points
+INDICATORS : 4 detected
+
+[HIGH]   Sender domain — amazon-support-help.org is not amazon.com.
+         This is subdomain/domain spoofing of the Amazon brand.
+[MEDIUM] SPF: SOFTFAIL — message may be legitimate but server configuration
+         is incorrect, or sender is unauthorized.
+[MEDIUM] Generic greeting — "Dear Customer" rather than registered name.
+[LOW]    Vague reason — "verification issue" with no order number cited.
+
+NOTE: DKIM passes for this domain, which makes it appear more legitimate.
+However, DKIM passing for a spoofed domain means only that the fake domain
+signed the message — not that the sender is Amazon.
+
+RECOMMENDED ACTION: Do not click link. Verify order status by logging in
+directly to amazon.com in a new browser tab. Report to IT if received at
+a work address.

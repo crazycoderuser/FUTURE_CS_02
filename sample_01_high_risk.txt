@@ -1,0 +1,66 @@
+=======================================================================
+PHISHING EMAIL SAMPLE 01 — HIGH RISK
+Captured: April 2025  |  Classification: PHISHING  |  Score: 14 pts
+=======================================================================
+
+----- RECONSTRUCTED EMAIL HEADERS -----
+
+Delivered-To: user@company.com
+Received: from mail.secure-account-verify.com (45.33.32.156)
+        by mx.company.com with ESMTP id x7si123456abc
+        for <user@company.com>;
+        Thu, 10 Apr 2025 02:14:33 -0700 (PDT)
+Received-SPF: fail (domain of security@secure-account-verify.com
+        does not designate 45.33.32.156 as permitted sender)
+Authentication-Results: mx.company.com;
+        spf=fail smtp.mailfrom=security@secure-account-verify.com;
+        dkim=fail header.i=@secure-account-verify.com;
+        dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=secure-account-verify.com
+Return-Path: <bounce@secure-account-verify.com>
+From: "Security Team" <security@secure-account-verify.com>
+To: user@company.com
+Reply-To: collect@secure-account-verify.com
+Subject: Urgent: Your Account Will Be Locked
+Date: Thu, 10 Apr 2025 02:14:00 -0700
+Message-ID: <20250410.021400.phish1@secure-account-verify.com>
+X-Originating-IP: [45.33.32.156]
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+
+----- EMAIL BODY -----
+
+Subject: Urgent: Your Account Will Be Locked
+
+Dear User,
+
+We noticed suspicious activity on your account.
+To avoid account suspension, please verify your details immediately.
+
+Verify Now: http://secure-account-verify.com/login
+
+Failure to verify within 24 hours will result in a permanent account lock.
+
+Regards,
+Security Team
+
+----- ANALYST NOTES -----
+
+RISK LEVEL : PHISHING (HIGH)
+SCORE      : 14 points
+INDICATORS : 10 detected
+
+[HIGH]   Spoofed sender domain — registered 4 days before send date,
+         no affiliation with any legitimate institution.
+[HIGH]   SPF: FAIL — originating server (45.33.32.156, Eastern Europe)
+         not authorized for this domain.
+[HIGH]   DKIM: FAIL — no valid cryptographic signature present.
+[HIGH]   DMARC: FAIL — domain policy violated.
+[HIGH]   Malicious link — HTTP (not HTTPS), fake domain, credential harvesting.
+[MEDIUM] Urgency language — "within 24 hours", "immediately".
+[MEDIUM] Fear language — "permanent account lock", "suspicious activity".
+[MEDIUM] Generic greeting — "Dear User" (no registered name).
+[LOW]    No specific account or transaction details provided.
+[LOW]    Unusual send time — 02:14 AM.
+[LOW]    Reply-To differs from From address.
+
+RECOMMENDED ACTION: Block domain. Report to IT security. Delete immediately.

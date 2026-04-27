@@ -1,0 +1,54 @@
+=======================================================================
+PHISHING EMAIL SAMPLE 03 — LOW RISK
+Captured: April 2025  |  Classification: LOW RISK  |  Score: 2 pts
+=======================================================================
+
+----- RECONSTRUCTED EMAIL HEADERS -----
+
+Delivered-To: user@company.com
+Received: from mail.deals-newsletter.com (203.0.113.88)
+        by mx.company.com with ESMTP id p9si334455mno
+        for <user@company.com>;
+        Tue, 8 Apr 2025 14:05:00 -0700 (PDT)
+Received-SPF: pass (domain of offers@deals-newsletter.com
+        designates 203.0.113.88 as permitted sender)
+Authentication-Results: mx.company.com;
+        spf=pass smtp.mailfrom=offers@deals-newsletter.com;
+        dkim=pass header.i=@deals-newsletter.com;
+        dmarc=pass (p=NONE) header.from=deals-newsletter.com
+From: "Deals Newsletter" <offers@deals-newsletter.com>
+To: user@company.com
+Subject: Exclusive Offer For You
+Date: Tue, 8 Apr 2025 14:05:00 -0700
+
+----- EMAIL BODY -----
+
+Subject: Exclusive Offer For You
+
+Hello there,
+
+We have an exclusive offer available for a limited time.
+Visit our website to learn more about our latest deals.
+
+See Offers: https://deals-newsletter.com/offer
+
+You can unsubscribe at any time using the link below.
+
+Best regards,
+The Deals Team
+
+----- ANALYST NOTES -----
+
+RISK LEVEL : LOW RISK
+SCORE      : 2 points
+INDICATORS : 2 detected
+
+[LOW]  Generic greeting — "Hello there" (no name used).
+[LOW]  "Limited time" language — mild urgency, but not fear-based.
+
+SPF: PASS | DKIM: PASS | DMARC: PASS
+Link uses HTTPS and resolves to the same domain as the sender.
+No credential request, no attachment, no impersonation of a known brand.
+
+RECOMMENDED ACTION: Likely legitimate marketing email or low-grade spam.
+No immediate threat. May be safely ignored or unsubscribed from.
